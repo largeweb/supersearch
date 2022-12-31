@@ -1,0 +1,4 @@
+#!/bin/bash
+PROMPT=$2
+
+curl https://api.openai.com/v1/completions -H "Content-Type: application/json" -H "Authorization: Bearer $1" -d '{"model": "text-davinci-003", "prompt": "'"$PROMPT"'", "temperature":0.3, "max_tokens": 1000}'
